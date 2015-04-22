@@ -1,8 +1,8 @@
-LOCAL_PATH := device/micromax/a106
+LOCAL_PATH := device/lenovo/A526
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/micromax/a106/BoardConfigVendor.mk
+-include vendor/lenovo/A526/BoardConfigVendor.mk
 
 #board info
 TARGET_ARCH := arm
@@ -15,7 +15,7 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
-TARGET_BOOTLOADER_BOARD_NAME := a106
+TARGET_BOOTLOADER_BOARD_NAME := A526
 
 #kernel
 BOARD_KERNEL_CMDLINE :=
@@ -73,14 +73,14 @@ TARGET_USERIMAGES_USE_EXT4:=true
 #TeamWinRecoveryProject#
 ########################
 
-#DEVICE_RESOLUTION := 480x800
-#  dual storage
+DEVICE_RESOLUTION := 480x800
+  #dual storage
 #TW_INTERNAL_STORAGE_PATH := "/emmc"
 #TW_INTERNAL_STORAGE_MOUNT_POINT := "emmc"
-#TW_EXTERNAL_STORAGE_PATH := "/sdcard"
-#TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
-#  flipped screen
-# RECOVERY_TOUCHSCREEN_SWAP_XY := true
-#RECOVERY_TOUCHSCREEN_FLIP_Y := true
-#RECOVERY_TOUCHSCREEN_FLIP_X := true
-#BOARD_HAS_FLIPPED_SCREEN := true
+TW_EXTERNAL_STORAGE_PATH := "/sdcard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+  #flipped screen
+RECOVERY_TOUCHSCREEN_SWAP_XY := true
+RECOVERY_TOUCHSCREEN_FLIP_Y := true
+RECOVERY_TOUCHSCREEN_FLIP_X := true
+BOARD_HAS_FLIPPED_SCREEN := true
