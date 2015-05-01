@@ -3,11 +3,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/micromax/a106/a106-vendor.mk)
+$(call inherit-product-if-exists, vendor/lenovo/A526/A526-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/micromax/a106/overlay
 
-LOCAL_PATH := device/micromax/a106
+LOCAL_PATH := device/lenovo/A526
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
@@ -37,8 +37,8 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_COPY_FILES += $(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_a106
-PRODUCT_DEVICE := a106
+PRODUCT_NAME := full_A526
+PRODUCT_DEVICE := A526
 
 # wifi
 PRODUCT_PACKAGES += \

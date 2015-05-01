@@ -1,8 +1,8 @@
-LOCAL_PATH := device/micromax/a106
+LOCAL_PATH := device/lenovo/A526
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/micromax/a106/BoardConfigVendor.mk
+-include vendor/lenovo/A526/BoardConfigVendor.mk
 
 #board info
 TARGET_BOARD_PLATFORM := mt6582
@@ -16,7 +16,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 #boot
 TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := a106
+TARGET_BOOTLOADER_BOARD_NAME := A526
 TARGET_NO_FACTORYIMAGE := true
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/boot.mk
 
@@ -74,7 +74,7 @@ TARGET_GLOBAL_CPPFLAGS += -mcpu=cortex-a7 -mfpu=neon -mfloat-abi=softfp
 TARGET_USERIMAGES_USE_EXT4:=true
 
 # EGL settings
-BOARD_EGL_CFG := device/micromax/a106/egl.cfg
+BOARD_EGL_CFG := device/lenovo/A526/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
@@ -119,14 +119,14 @@ DEVICE_RESOLUTION := 480x800
 #TeamWinRecoveryProject#
 ########################
 
-#DEVICE_RESOLUTION := 480x800
-#  dual storage
-#TW_INTERNAL_STORAGE_PATH := "/emmc"
-#TW_INTERNAL_STORAGE_MOUNT_POINT := "emmc"
-#TW_EXTERNAL_STORAGE_PATH := "/sdcard"
-#TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
-#  flipped screen
-# RECOVERY_TOUCHSCREEN_SWAP_XY := true
-#RECOVERY_TOUCHSCREEN_FLIP_Y := true
-#RECOVERY_TOUCHSCREEN_FLIP_X := true
-#BOARD_HAS_FLIPPED_SCREEN := true
+DEVICE_RESOLUTION := 480x800
+  dual storage
+TW_INTERNAL_STORAGE_PATH := "/emmc"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "emmc"
+TW_EXTERNAL_STORAGE_PATH := "/sdcard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+  flipped screen
+RECOVERY_TOUCHSCREEN_SWAP_XY := true
+RECOVERY_TOUCHSCREEN_FLIP_Y := true
+RECOVERY_TOUCHSCREEN_FLIP_X := true
+BOARD_HAS_FLIPPED_SCREEN := true
